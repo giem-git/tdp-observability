@@ -19,8 +19,8 @@ setup_python_venv() {
   echo "Install python dependencies"
   (
     source "${PYTHON_VENV}/bin/activate"
-
     pip install -r dev/requirements.txt
+    ansible-galaxy collection install community.general
   )
   return 0
 }
